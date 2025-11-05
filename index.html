@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N Tamil Arasan — PHP/Laravel Developer</title>
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --text: #222;
+      --primary: #555;
+      --accent: #0078d7;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 30px;
+      background: linear-gradient(135deg, #e0e0e0, #cfcfcf);
+    }
+
+    header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 10px 0 5px;
+    }
+
+    p.role {
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: var(--accent);
+      border-left: 5px solid var(--accent);
+      padding-left: 10px;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+
+    .skills,
+    .experience,
+    .education,
+    .certifications,
+    .projects,
+    .internship {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      background: #e0e0e0;
+      padding: 25px;
+      color: var(--primary);
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #005fa3;
+    }
+
+    /* Popup (Modal) Styles */
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      animation: zoomIn 0.4s ease-in-out;
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #ff6666;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="tamil.jpg" alt="N Tamil Arasan" id="profilePic" />
+    <h1>N Tamil Arasan</h1>
+    <p class="role">PHP / Laravel Developer</p>
+    <p>Tamil Nadu, India</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a dedicated <strong>PHP/Laravel Developer</strong> with excellent problem-solving abilities,
+      attention to detail, and a collaborative mindset.
+      I’m eager to apply my academic knowledge to real-world challenges
+      while continuously learning and contributing effectively to a professional environment.
+      My goal is to create clean, efficient, and scalable web applications
+      that deliver meaningful user experiences.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <div class="card">PHP / Laravel Framework</div>
+      <div class="card">Python</div>
+      <div class="card">HTML & CSS</div>
+      <div class="card">MySQL / Database Design</div>
+      <div class="card">N+ / Linux</div>
+      <div class="card">AWS Cloud</div>
+      <div class="card">A+ / Hardware & Networking</div>
+      <div class="card">Version Control (Git)</div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education">
+      <div class="card">
+        <h3>Bachelor’s Degree in Computer Science</h3>
+        <p>— (Expected 2025)</p>
+      </div>
+      <div class="card">
+        <h3>Higher Secondary Education</h3>
+        <p>— Completed with distinction</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Inventory Management System (Laravel)</h3>
+        <p>
+          Built a comprehensive <strong>Inventory Management System</strong> using Laravel and MySQL
+          to streamline stock tracking, supplier management, and billing operations.
+          Integrated real-time item updates, low-stock alerts, and detailed reporting.
+          Focused on scalability, data integrity, and a clean user interface
+          to ensure smooth business operations.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>
+          Designed and developed a responsive personal portfolio using
+          HTML, CSS, and JavaScript to showcase my skills, projects, and contact details.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certifications">
+      <div class="card">Python Programming Certification</div>
+      <div class="card">Networking (N+) Certification</div>
+      <div class="card">AWS Cloud Fundamentals</div>
+      <div class="card">A+ Hardware & System Maintenance</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><b>Email:</b> <a href="mailto:tamilarasantm2623@gmail.com">tamilarasantm2623@gmail.com</a></p>
+    <p><b>Phone:</b> +91 8838117655</p>
+    <p><b>LinkedIn:</b> <a href="www.linkedin.com/in/tamil-arasan-n-a68b952a8"
+        target="_blank">linkedin.com/in/tamil-arasan</a></p>
+    <p><b>GitHub:</b> <a href="https://github.com/tamil182" target="_blank">github.com/tamilarasan</a></p>
+    <p><b>Location:</b> Tamil Nadu, India</p>
+  </section>
+
+  <footer>
+    © 2025 N Tamil Arasan | <a href="mailto:tamilarasantm2623@gmail.com">tamilarasantm2623@gmail.com</a>
+  </footer>
+
+  <!-- Popup Modal -->
+  <div class="popup" id="imgPopup">
+    <span class="close" id="closePopup">&times;</span>
+    <img id="popupImg" src="" alt="Profile Enlarged" />
+  </div>
+
+  <script>
+    const profilePic = document.getElementById("profilePic");
+    const popup = document.getElementById("imgPopup");
+    const popupImg = document.getElementById("popupImg");
+    const closePopup = document.getElementById("closePopup");
+
+    profilePic.addEventListener("click", () => {
+      popup.style.display = "flex";
+      popupImg.src = profilePic.src;
+    });
+
+    closePopup.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+
+    popup.addEventListener("click", (e) => {
+      if (e.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+  </script>
+</body>
+
+</html>
